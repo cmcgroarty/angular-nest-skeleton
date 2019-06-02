@@ -23,7 +23,7 @@
               "projects/app/src/assets"
             ],
             "styles": [
-              "projects/app/src/styles.css"
+              "projects/app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -83,7 +83,7 @@
               "projects/app/src/assets"
             ],
             "styles": [
-              "projects/app/src/styles.css"
+              "projects/app/src/styles.scss"
             ],
             "scripts": []
           }
@@ -115,5 +115,30 @@
         }
       }
     }},
-  "defaultProject": "app"
+  "defaultProject": "app",
+  "schematics": {
+    "@schematics/angular:module": {
+      "routing": true,
+      "commonModule": false
+    },
+    "@schematics/angular:component": {
+      "styleext": "scss",
+      "changeDetection": "OnPush",
+      "lintFix": true
+    },
+    "@schematics/angular:directive": {
+      "lintFix": true
+    },
+    "@schematics/angular:pipe": {
+      "lintFix": true
+    },
+    "@schematics/angular:service": {
+      "lintFix": true
+    },
+    "@ngrx/schematics:container": {
+      "styleext": "scss",
+      "changeDetection": "OnPush",
+      "lintFix": true
+    }
+  }
 }
