@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "../../dist/api",
+    "types": [
+      "node"
+    ]
+  },
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", "e2e", "dist", "src/**/*.spec.ts"]
+}
