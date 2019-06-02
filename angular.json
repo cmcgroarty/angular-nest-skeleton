@@ -19,12 +19,18 @@
             "polyfills": "projects/app/src/polyfills.ts",
             "tsConfig": "projects/app/tsconfig.app.json",
             "assets": [
+              "projects/app/src/manifest.json",
               "projects/app/src/favicon.ico",
               "projects/app/src/assets"
             ],
             "styles": [
               "projects/app/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/app/src/app/shared/material/scss"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -85,6 +91,11 @@
             "styles": [
               "projects/app/src/styles.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "projects/app/src/app/shared/material/scss"
+              ]
+            },
             "scripts": []
           }
         },
@@ -114,20 +125,37 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "app",
   "schematics": {
-    "@schematics/angular:module": {
-      "routing": true,
-      "commonModule": false
+    "@schematics/angular:application": {
+      "style": "scss",
+      "routing": true
+    },
+    "@schematics/angular:class": {
+      "lintFix": true
     },
     "@schematics/angular:component": {
-      "styleext": "scss",
+      "style": "scss",
       "changeDetection": "OnPush",
       "lintFix": true
     },
     "@schematics/angular:directive": {
       "lintFix": true
+    },
+    "@schematics/angular:enum": {
+      "lintFix": true
+    },
+    "@schematics/angular:guard": {
+      "lintFix": true
+    },
+    "@schematics/angular:interface": {
+      "lintFix": true
+    },
+    "@schematics/angular:module": {
+      "routing": true,
+      "commonModule": false
     },
     "@schematics/angular:pipe": {
       "lintFix": true
@@ -136,7 +164,7 @@
       "lintFix": true
     },
     "@ngrx/schematics:container": {
-      "styleext": "scss",
+      "style": "scss",
       "changeDetection": "OnPush",
       "lintFix": true
     }

@@ -5,7 +5,22 @@
     "types": [
       "jest",
       "node"
-    ]
+    ],
+    "paths": {
+      "@core/*": [
+        "./src/app/core/*"
+      ],
+      "@modules/*": [
+        "./src/app/modules/*"
+      ],
+      "@shared/*": [
+        "./src/app/shared/*"
+      ],
+      "@env/*": [
+        "./src/environments/*"
+      ]
+    },]
+    }
   },
   "files": [
     "src/test.ts",
