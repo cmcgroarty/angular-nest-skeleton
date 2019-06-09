@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "nest": "nest",
     "build": "concurrently --handle-input \"tsc -p projects/api/tsconfig.build.json\" \"ng build\"",
     "format": "prettier --write \"projects/api/src/**/*.ts\"",
     "start": "ts-node -r tsconfig-paths/register projects/api/src/main.ts",
